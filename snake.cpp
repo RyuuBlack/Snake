@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
+#include <ncurses.h>
 #include <unistd.h>
 
 using namespace std;
@@ -151,7 +151,7 @@ void snake_move(){
   while(x<=134 && x>=2 && y<=30 && y>=4){
 
     // kbhit() es una función que determina si se está precionando una tecla del teclado.
-    if (kbhit()){
+    if (_kbhit()){
       
       tecla = getch(); // getch() determina que tecla se esta oprimiendo en el teclado.
 
